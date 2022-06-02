@@ -19,7 +19,7 @@ class FoodItemDetailsScenePresenter: ObservableObject, FoodItemDetailsScenePrese
         let item = response.item
         let fat = FoodDetailsSceneModels.CardComponentData(
             title: "Fat",
-            subtitle: "\(Int(item.gramsperserving * item.gramsperserving))gram / serving",
+            subtitle: "\(Int(item.gramsperserving / item.gramsperserving)) gram / serving",
             percentage: item.fat / 100,
             progressBarDescription: "\(Int(item.fat))% of daily recommended",
             colorType: .orange

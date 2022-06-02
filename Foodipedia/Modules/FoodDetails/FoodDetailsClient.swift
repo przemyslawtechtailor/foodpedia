@@ -30,7 +30,7 @@ class FakeDetailsClient: FoodDetailsClientProtocol {
     func getFoodData(forId id: Int) -> AnyPublisher<FoodDetails.Item, Error> {
         let subject = PassthroughSubject<FoodDetails.Item, Error>()
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             subject.send(FoodDetails.Item.fakeItem())
             subject.send(completion: .finished)
 //            subject.send(completion: .failure(NSError(domain: "some", code: 1)))

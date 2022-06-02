@@ -38,7 +38,7 @@ struct FoodItemsScene: View {
         }
         .task {
             // TODO: Temp
-            interactor.shakeDetected()
+//            interactor.shakeDetected()
         }
     }
 
